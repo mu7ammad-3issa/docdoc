@@ -1,16 +1,26 @@
-# flutter_complete_project
+# doc_app
 
-A new Flutter project.
+## 🎨 System Design
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+lib/
+├── core/                      # Core modules and shared utilities
+│   ├── di/                    # Dependency injection configuration (get_it) 
+│   ├── networking/            # HTTP client setup (Dio + Retrofit)
+│   ├── routing/               # Navigation and route management
+│   ├── helpers/               # Common utility classes and functions
+│   ├── theming/               # App-wide theme and style definitions
+│   └── widgets/               # Shared reusable widgets 
+│                      
+├── features/                  # Feature-specific modules
+│   └── feature_name/          # Individual feature module
+│       ├── data/              # Data layer for handling business logic
+│       │   ├── models/        # Data models specific to the feature 
+│       │   └── repo/          # Repositories for data operations
+│       │ 
+│       ├── logic/             # Business logic and state management
+│       │   ├── cubit          # Cubit for state management
+│       │   └── states         # State definitions for the cubit
+│       │
+│       └── ui/                # Presentation layer
+│           ├── widgets/       # Feature-specific reusable widgets
+│           └── screens/       # Screen implementations for the feature
