@@ -5,7 +5,6 @@ GEM
       base64
       nkf
       rexml
-    abbrev (0.1.2)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     artifactory (3.0.17)
@@ -30,24 +29,11 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     babosa (1.0.4)
     base64 (0.2.0)
-    capybara (2.4.4)
-      mime-types (>= 1.16)
-      nokogiri (>= 1.3.3)
-      rack (>= 1.0.0)
-      rack-test (>= 0.5.4)
-      xpath (~> 2.0)
     claide (1.1.0)
-    cliver (0.3.2)
     colored (1.2)
     colored2 (3.1.2)
     commander (4.6.0)
       highline (~> 2.0.0)
-    credentials_manager (1.0.0)
-      colored
-      commander (>= 4.3.5)
-      fastlane (>= 2.0.0, < 3.0.0)
-      highline (>= 1.7.1)
-      security
     declarative (0.0.20)
     digest-crc (0.7.0)
       rake (>= 12.0.0, < 14.0.0)
@@ -126,20 +112,11 @@ GEM
       xcodeproj (>= 1.13.0, < 2.0.0)
       xcpretty (~> 0.4.1)
       xcpretty-travis-formatter (>= 0.0.3, < 2.0.0)
+    fastlane-plugin-firebase_app_distribution (0.10.1)
+      google-apis-firebaseappdistribution_v1 (~> 0.3.0)
+      google-apis-firebaseappdistribution_v1alpha (~> 0.2.0)
     fastlane-sirp (1.0.0)
       sysrandom (~> 1.0)
-    fastlane_core (0.3.4)
-      babosa
-      capybara (~> 2.4.3)
-      colored
-      commander (>= 4.1.0)
-      credentials_manager (>= 0.1.3)
-      highline
-      json
-      multi_json
-      phantomjs (~> 1.9.8)
-      poltergeist (~> 1.5.1)
-    fiddle (1.1.6)
     gh_inspector (1.1.3)
     google-apis-androidpublisher_v3 (0.54.0)
       google-apis-core (>= 0.11.0, < 2.a)
@@ -151,6 +128,10 @@ GEM
       representable (~> 3.0)
       retriable (>= 2.0, < 4.a)
       rexml
+    google-apis-firebaseappdistribution_v1 (0.3.0)
+      google-apis-core (>= 0.11.0, < 2.a)
+    google-apis-firebaseappdistribution_v1alpha (0.2.0)
+      google-apis-core (>= 0.11.0, < 2.a)
     google-apis-iamcredentials_v1 (0.17.0)
       google-apis-core (>= 0.11.0, < 2.a)
     google-apis-playcustomapp_v1 (0.13.0)
@@ -187,10 +168,6 @@ GEM
     jwt (2.10.1)
       base64
     logger (1.7.0)
-    mime-types (3.7.0)
-      logger
-      mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0507)
     mini_magick (4.13.2)
     mini_mime (1.1.5)
     multi_json (1.15.0)
@@ -199,22 +176,10 @@ GEM
     nanaimo (0.4.0)
     naturally (2.2.1)
     nkf (0.2.0)
-    nokogiri (1.18.8-x64-mingw-ucrt)
-      racc (~> 1.4)
     optparse (0.6.0)
     os (1.1.4)
-    phantomjs (1.9.8.0)
     plist (3.7.2)
-    poltergeist (1.5.1)
-      capybara (~> 2.1)
-      cliver (~> 0.3.1)
-      multi_json (~> 1.0)
-      websocket-driver (>= 0.2.0)
     public_suffix (6.0.2)
-    racc (1.8.1)
-    rack (3.1.14)
-    rack-test (2.2.0)
-      rack (>= 1.3)
     rake (13.2.1)
     representable (3.2.0)
       declarative (< 0.1.0)
@@ -245,10 +210,6 @@ GEM
       tty-cursor (~> 0.7)
     uber (0.1.0)
     unicode-display_width (2.6.0)
-    websocket-driver (0.7.7)
-      base64
-      websocket-extensions (>= 0.1.0)
-    websocket-extensions (0.1.5)
     word_wrap (1.0.0)
     xcodeproj (1.27.0)
       CFPropertyList (>= 2.3.3, < 4.0)
@@ -261,17 +222,13 @@ GEM
       rouge (~> 3.28.0)
     xcpretty-travis-formatter (1.0.1)
       xcpretty (~> 0.2, >= 0.0.7)
-    xpath (2.1.0)
-      nokogiri (~> 1.3)
 
 PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  abbrev
   fastlane
-  fastlane_core
-  fiddle
+  fastlane-plugin-firebase_app_distribution
 
 BUNDLED WITH
    2.6.8
