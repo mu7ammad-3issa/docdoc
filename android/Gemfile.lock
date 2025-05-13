@@ -228,7 +228,8 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  fastlane
+  abbrev
+  fastlane (~> 2.228)
   fastlane-plugin-firebase_app_distribution
 
 BUNDLED WITH
