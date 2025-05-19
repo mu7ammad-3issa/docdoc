@@ -1,6 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
+import '../helpers/constants.dart';
+import '../helpers/shared_pref_helper.dart';
+
 class DioFactory {
   /// private constructor as I don't want to allow creating an instance of this class
   DioFactory._();
@@ -15,6 +18,7 @@ class DioFactory {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
+      addDioHeaders();
       addDioInterceptor();
       return dio!;
     } else {
@@ -22,11 +26,16 @@ class DioFactory {
     }
   }
 
+  static void setTokenIntoHeaderAfterLogin(String token) {
+    dio?.options.headers['Authorization'] =
+        'Bearer $token'; // set the token in the header
+  }
+
   static void addDioHeaders() {
     dio?.options.headers = {
       'Accept': 'application/json',
       'Authorization':
-          'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzQ3MzgzNTAyLCJleHAiOjE3NDc0Njk5MDIsIm5iZiI6MTc0NzM4MzUwMiwianRpIjoiU0dRcThySkZzNU1LWVA4QiIsInN1YiI6IjM4MzAiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.0r2BnFoTwDDvT0VOeukRL3mO7H8pJiGA_V3KbZfQrFw',
+          'Bearer ${SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
     };
   }
 
