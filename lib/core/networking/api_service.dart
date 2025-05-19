@@ -4,6 +4,7 @@ import 'package:flutter_complete_project/features/login/data/models/login_reques
 import 'package:flutter_complete_project/features/login/data/models/login_response.dart';
 import 'package:retrofit/retrofit.dart';
 
+import '../../features/home/data/models/specializations_response_model.dart';
 import '../../features/sign_up/data/models/sign_up_request_body.dart';
 import '../../features/sign_up/data/models/sign_up_response.dart';
 part 'api_service.g.dart';
@@ -16,4 +17,6 @@ abstract class ApiService {
   Future<LoginResponse> login(@Body() LoginRequestBody loginRequestBody);
   @POST(ApiConstants.signupEndpoint)
   Future<SignUpResponse> register(@Body() SignUpRequestBody signupRequestBody);
+  @GET(ApiConstants.specializationEndpoint)
+  Future<SpecializationsResponseModel> getSpecialization();
 }
