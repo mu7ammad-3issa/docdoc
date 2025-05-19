@@ -7,6 +7,8 @@ import 'package:flutter_complete_project/features/sign_up/data/repos/sign_up_rep
 import 'package:flutter_complete_project/features/sign_up/logic/cubit/sign_up_cubit.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../features/home/data/repos/home_repo.dart';
+
 final getIt = GetIt.instance;
 Future<void> setupGetIt() async {
   // Dio & ApiService
@@ -20,4 +22,7 @@ Future<void> setupGetIt() async {
   // sign up
   getIt.registerLazySingleton<SignUpRepo>(() => SignUpRepo(getIt()));
   getIt.registerFactory<SignUpCubit>(() => SignUpCubit(getIt()));
+
+  // home
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
 }
