@@ -1,4 +1,4 @@
-import '../../../../core/networking/api_error_handler.dart';
+import 'package:flutter_complete_project/core/networking/api_error_handler.dart';
 import '../../../../core/networking/api_result.dart';
 import '../../../../core/networking/api_service.dart';
 import '../models/specializations_response_model.dart';
@@ -11,7 +11,7 @@ class HomeRepo {
       final response = await _homeApiService.getSpecialization();
       return ApiResult.success(response);
     } catch (error) {
-      return ApiResult.failure(ErrorHandler.handle(error));
+      return ApiResult.failure(ApiErrorHandler.handle(error));
     }
   }
 }
