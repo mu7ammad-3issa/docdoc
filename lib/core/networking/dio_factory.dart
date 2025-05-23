@@ -31,11 +31,11 @@ class DioFactory {
         'Bearer $token'; // set the token in the header
   }
 
-  static void addDioHeaders() {
+  static void addDioHeaders() async {
     dio?.options.headers = {
       'Accept': 'application/json',
       'Authorization':
-          'Bearer ${SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
+          'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
     };
   }
 
