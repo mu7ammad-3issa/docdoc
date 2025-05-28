@@ -20,7 +20,6 @@ DocDoc is a Flutter application designed to help users manage and schedule medic
 ![Screenshot_٢٠٢٥٠٥٢٣-١٤٣١١٥](https://github.com/user-attachments/assets/25abe966-eb20-48c4-9bbb-37f3417a1721)
 
 
-*(Add your screenshots here. You can use Markdown image syntax:)*
 ## 🎨 System Design
 
 The project follows a feature-first architecture, with a clear separation of concerns between core functionalities and feature-specific modules.
