@@ -4,6 +4,23 @@
 
 DocDoc is a Flutter application designed to help users manage and schedule medical appointments easily, providing a new and streamlined experience.
 
+## 📸 Screenshots
+
+### Splash
+![Screenshot_٢٠٢٥٠٤٣٠-١٩٤٢٥٧](https://github.com/user-attachments/assets/a4edffe3-f1fd-4ada-b607-45e445fcd283)
+
+
+### Onboarding
+![Screenshot_٢٠٢٥٠٤٣٠-٠٦٤٦٠١](https://github.com/user-attachments/assets/45b2d9aa-1a8a-492c-a921-7fb9a2d68183)
+
+### Authentication (Login & Sign-Up)
+![Screenshot_٢٠٢٥٠٥٠٦-٢٣٠٩٢١](https://github.com/user-attachments/assets/9bdd0ba6-ed52-4376-bd13-d0c06933451c) ![Screenshot_٢٠٢٥٠٥٠٨-١١١٠٣٤](https://github.com/user-attachments/assets/56a7bcff-014b-4dbe-b56c-5c9c0802adaf)
+
+### Home Screen
+![Screenshot_٢٠٢٥٠٥٢٣-١٤٣١١٥](https://github.com/user-attachments/assets/25abe966-eb20-48c4-9bbb-37f3417a1721)
+
+
+*(Add your screenshots here. You can use Markdown image syntax:)*
 ## 🎨 System Design
 
 The project follows a feature-first architecture, with a clear separation of concerns between core functionalities and feature-specific modules.
@@ -77,7 +94,7 @@ lib/
    
 4.  **Configure Firebase:**
     * Place your `google-services.json` file in `android/app/`.
-    * Configure iOS Firebase setup as per `firebase_options.dart`.
+    * Configure iOS Firebase setup as per `lib/firebase_options.dart`.
 
 ### Running the App
 
@@ -177,12 +194,3 @@ A basic widget test example is provided in `test/widget_test.dart`.
 ## 🤝 Contributing
 
 Contributions are welcome! Please follow the existing code style and structure.
-
-## 📄 License
-
-This project does not specify a license. Please add one if required.
-
----
-
-_This README was generated based on the project structure and configuration files._
-```
